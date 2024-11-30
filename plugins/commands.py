@@ -38,7 +38,7 @@ async def start(client, message):
         files_counts = await db.files_count(message.from_user.id, "files_count") or 0
         if message.chat.type in [enums.ChatType.GROUP, enums.ChatType.SUPERGROUP]:
             buttons = [[
-                        InlineKeyboardButton('☆ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ ☆', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
+                        InlineKeyboardButton('☆ ᴄʜᴇᴄᴋ ᴏᴜᴛ ᴛʜᴇ ʟɪʙʀᴀʀʏ ☆', url='https://t.me/Bookslibraryofficial')
                       ]]
             reply_markup = InlineKeyboardMarkup(buttons)
             await message.reply_text(
@@ -57,7 +57,7 @@ async def start(client, message):
             await client.send_message(LOG_CHANNEL, script.LOG_TEXT_P.format(message.from_user.id, message.from_user.mention, temp.B_NAME))
         if len(message.command) != 2:
             buttons = [[
-                        InlineKeyboardButton('☆ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ ☆', url=f'http://telegram.me/{temp.U_NAME}?startgroup=true')
+                        InlineKeyboardButton('☆ ᴄʜᴇᴄᴋ ᴏᴜᴛ ᴛʜᴇ ʟɪʙʀᴀʀʏ ☆', url='https://t.me/Bookslibraryofficial')
                     ],[
                         InlineKeyboardButton('🛠️ ᴜᴘᴅᴀᴛᴇꜱ', callback_data='channels'), 
                         InlineKeyboardButton('💡 ꜰᴇᴀᴛᴜʀᴇꜱ', callback_data='features')
@@ -84,7 +84,7 @@ async def start(client, message):
             return
         if len(message.command) == 2 and message.command[1] in ["subscribe", "error", "okay", "help"]:
             buttons = [[
-                        InlineKeyboardButton('☆ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ ☆', url=f'http://telegram.me/{temp.U_NAME}?startgroup=true')
+                        InlineKeyboardButton('☆ ᴄʜᴇᴄᴋ ᴏᴜᴛ ᴛʜᴇ ʟɪʙʀᴀʀʏ ☆', url='https://t.me/Bookslibraryofficial')
                     ],[
                         InlineKeyboardButton('🛠️ ᴜᴘᴅᴀᴛᴇꜱ', callback_data='channels'), 
                         InlineKeyboardButton('💡 ꜰᴇᴀᴛᴜʀᴇꜱ', callback_data='features')
